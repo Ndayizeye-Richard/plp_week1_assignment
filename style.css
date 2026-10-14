@@ -1,0 +1,141 @@
+/* Basic page styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #243047;
+  background-color: #f4f7fb;
+}
+
+/* Element selector: page heading */
+h1 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+}
+
+h2 {
+  margin-top: 0;
+  color: #1d3557;
+}
+
+/* Class selector: header area */
+.page-header {
+  padding: 36px 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1d3557;
+}
+
+.page-header p {
+  margin: 0;
+  color: #e5edf8;
+}
+
+/* ID selector: main page content */
+#add-expense,
+#your-expenses {
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(29, 53, 87, 0.08);
+}
+
+.container {
+  width: min(900px, 92%);
+  margin: 30px auto;
+}
+
+/* Class selector: add-expense section */
+.expense-form-section {
+  background-color: #ffffff;
+  border-left: 5px solid #2a9d8f;
+}
+
+.expense-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #2a9d8f;
+  outline-offset: 1px;
+}
+
+.submit-button {
+  width: fit-content;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  background-color: #2a9d8f;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ID selector: expenses placeholder area */
+#your-expenses {
+  background-color: #eaf2ff;
+  border-left: 5px solid #457b9d;
+}
+
+.empty-state {
+  padding: 24px;
+  text-align: center;
+  border: 2px dashed #b8c8dc;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.empty-state p {
+  margin: 4px 0;
+}
+
+.helper-text {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.page-footer {
+  padding: 18px;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 640px) {
+  .expense-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .expense-form .form-group:nth-child(3),
+  .expense-form .submit-button {
+    grid-column: 1 / -1;
+  }
+}
